@@ -32,3 +32,50 @@
  */
 
 //writ your code here .....
+
+var player1=players("jony")
+var player2=players("pet")
+
+function players(name){
+ var player={}
+ player.name=name,
+ player.addInfo=addInfo,
+ player.increaseLevel=increaseLevel,
+ player.isAvailable=isAvailable,
+ player.addPlayer=addPlayer,
+ player.decrease=decrease
+ return player;
+}
+
+var arr=[];
+function addInfo(age,position,level,availability){
+  	 return arr.push(this.age=age,
+  	this.position=position,
+  	this.level=level,
+  	this.availability=availability
+  	)
+}
+
+
+function increaseLevel(n){
+	return this.level + n;
+}
+
+function isAvailable(){
+	if (this.availability !== undefined){
+		return true
+	}else{
+		return false
+	}
+}
+
+function addPlayer(){
+
+}
+
+function decrease(){
+ return arr.filter(function(element){
+   return element > 30 
+     
+ })
+}
